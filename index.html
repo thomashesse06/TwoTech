@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TwoTech – Web & Discord Bots</title>
+<style>
+/* Reset */
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, sans-serif;}
+body {background:#0d1117; color:#fff; line-height:1.6;}
+a {text-decoration:none; color:inherit;}
+button {cursor:pointer; border:none; border-radius:5px;}
+
+/* Header */
+header {background:#161b22; padding:50px 20px; text-align:center;}
+header h1 {font-size:3rem; color:#0ff;}
+header p {font-size:1.2rem; color:#ccc; margin-top:10px;}
+header button {background:#0ff; color:#0d1117; padding:15px 30px; font-size:1rem; margin-top:20px; transition:0.3s;}
+header button:hover {background:#09c;}
+
+/* Sections */
+section {padding:60px 20px; max-width:1000px; margin:0 auto;}
+h2 {text-align:center; font-size:2.5rem; margin-bottom:40px; color:#0ff;}
+.cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+.card {background:#161b22; padding:30px; border-radius:10px; flex:1 1 300px; max-width:320px; transition:0.3s;}
+.card:hover {background:#0a0f14;}
+.card h3 {font-size:1.8rem; margin-bottom:15px; color:#0ff;}
+.card ul {list-style:none; padding-left:0;}
+.card ul li {margin:10px 0; padding-left:15px; position:relative;}
+.card ul li::before {content:'✔'; position:absolute; left:0; color:#0ff;}
+
+/* Contact */
+.contact-form {display:flex; flex-direction:column; max-width:500px; margin:0 auto;}
+.contact-form input, .contact-form textarea {margin-bottom:15px; padding:15px; border-radius:5px; border:none;}
+.contact-form button {background:#0ff; color:#0d1117; padding:15px; font-size:1rem; transition:0.3s;}
+.contact-form button:hover {background:#09c;}
+
+/* Footer */
+footer {text-align:center; padding:30px; background:#161b22; margin-top:50px; color:#888;}
+@media(max-width:768px){.cards{flex-direction:column;}}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>TwoTech</h1>
+    <p>Websites, Discord Bots & mehr – schnell, sauber, professionell</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Jetzt Kontakt aufnehmen</button>
+</header>
+
+<section id="services">
+    <h2>Unsere Services</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Websites</h3>
+            <ul>
+                <li>Mini Site (One-Pager)</li>
+                <li>Normal Site (bis 5 Seiten)</li>
+                <li>Advanced Site (bis 10 Seiten, individuelles Design)</li>
+                <li>Responsive & sauber programmiert</li>
+                <li>DSGVO & SEO-Grundsetup</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Discord Bots</h3>
+            <ul>
+                <li>Free Bot (Basisfunktionen)</li>
+                <li>Super Bot (alle Features, Custom Name & Avatar)</li>
+                <li>Support-/Zweiter Bot</li>
+                <li>Immer online (Paid Plan)</li>
+                <li>Individuelle Anpassungen möglich</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Sonstiges Tech</h3>
+            <ul>
+                <li>Automatisierungen</li>
+                <li>Hosting Setup</li>
+                <li>Domain & Email Einrichtung</li>
+                <li>Kleinprojekte & Tools</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="packages">
+    <h2>Preispakete</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Mini Site</h3>
+            <ul>
+                <li>1 Seite (One-Pager)</li>
+                <li>Deine Texte werden eingebaut</li>
+                <li>10 € einmalig</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Normal Site</h3>
+            <ul>
+                <li>Bis 5 Seiten</li>
+                <li>Kontaktformular + Google Maps</li>
+                <li>70 € einmalig</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Advanced Site</h3>
+            <ul>
+                <li>Bis 10 Seiten, individuelles Design</li>
+                <li>Animationen, Cookie-Banner, SEO-Grundsetup</li>
+                <li>150 € einmalig</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Dein Name" required>
+        <input type="email" placeholder="Deine E-Mail" required>
+        <textarea placeholder="Deine Nachricht" rows="6" required></textarea>
+        <button type="submit">Nachricht senden</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2026 TwoTech. Alle Rechte vorbehalten.
+</footer>
+
+</body>
+</html>
