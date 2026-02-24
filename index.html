@@ -3,88 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TwoTech – Web & Discord Bots</title>
+<title>TwoTech – Web, Discord Bots & Tech</title>
 <style>
-/* Reset */
+/* Reset & Basics */
 * {margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, sans-serif;}
 body {background:#0d1117; color:#fff; line-height:1.6;}
 a {text-decoration:none; color:inherit;}
-button {cursor:pointer; border:none; border-radius:5px;}
+button {cursor:pointer; border:none; border-radius:5px; transition:0.3s;}
+
+/* Navigation */
+nav {position:fixed; width:100%; background:#161b22; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; z-index:100;}
+nav h1 {color:#0ff; font-size:1.8rem;}
+nav ul {list-style:none; display:flex; gap:25px;}
+nav ul li {font-size:1rem;}
+nav ul li a:hover {color:#09c;}
 
 /* Header */
-header {background:#161b22; padding:50px 20px; text-align:center;}
-header h1 {font-size:3rem; color:#0ff;}
-header p {font-size:1.2rem; color:#ccc; margin-top:10px;}
-header button {background:#0ff; color:#0d1117; padding:15px 30px; font-size:1rem; margin-top:20px; transition:0.3s;}
+header {padding:100px 20px 50px 20px; text-align:center;}
+header h2 {font-size:3rem; color:#0ff; margin-bottom:15px;}
+header p {font-size:1.2rem; color:#ccc; margin-bottom:25px;}
+header button {background:#0ff; color:#0d1117; padding:15px 30px; font-size:1rem;}
 header button:hover {background:#09c;}
 
 /* Sections */
-section {padding:60px 20px; max-width:1000px; margin:0 auto;}
+section {padding:80px 20px; max-width:1100px; margin:0 auto;}
 h2 {text-align:center; font-size:2.5rem; margin-bottom:40px; color:#0ff;}
-.cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+
+/* Cards */
+.cards {display:flex; flex-wrap:wrap; gap:25px; justify-content:center;}
 .card {background:#161b22; padding:30px; border-radius:10px; flex:1 1 300px; max-width:320px; transition:0.3s;}
 .card:hover {background:#0a0f14;}
 .card h3 {font-size:1.8rem; margin-bottom:15px; color:#0ff;}
 .card ul {list-style:none; padding-left:0;}
-.card ul li {margin:10px 0; padding-left:15px; position:relative;}
+.card ul li {margin:10px 0; padding-left:20px; position:relative;}
 .card ul li::before {content:'✔'; position:absolute; left:0; color:#0ff;}
+
+/* Pricing */
+.price {text-align:center; font-size:2rem; margin-top:10px; color:#0ff;}
 
 /* Contact */
 .contact-form {display:flex; flex-direction:column; max-width:500px; margin:0 auto;}
 .contact-form input, .contact-form textarea {margin-bottom:15px; padding:15px; border-radius:5px; border:none;}
-.contact-form button {background:#0ff; color:#0d1117; padding:15px; font-size:1rem; transition:0.3s;}
+.contact-form button {background:#0ff; color:#0d1117; padding:15px; font-size:1rem;}
 .contact-form button:hover {background:#09c;}
+.contact-info {text-align:center; margin-top:20px; font-size:1rem; color:#ccc;}
+.contact-info a {color:#0ff;}
 
 /* Footer */
 footer {text-align:center; padding:30px; background:#161b22; margin-top:50px; color:#888;}
-@media(max-width:768px){.cards{flex-direction:column;}}
+footer a {color:#0ff; text-decoration:none;}
+footer a:hover {color:#09c;}
+
+@media(max-width:768px){.cards{flex-direction:column; align-items:center;}}
 </style>
 </head>
 <body>
 
-<header>
+<!-- Navigation -->
+<nav>
     <h1>TwoTech</h1>
-    <p>Websites, Discord Bots & mehr – schnell, sauber, professionell</p>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#packages">Pakete</a></li>
+        <li><a href="#prices">Preise</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+    </ul>
+</nav>
+
+<!-- Header -->
+<header id="home">
+    <h2>TwoTech</h2>
+    <p>Websites, Discord Bots & Tech-Lösungen – schnell, sauber & professionell</p>
     <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Jetzt Kontakt aufnehmen</button>
 </header>
 
+<!-- Services Section -->
 <section id="services">
     <h2>Unsere Services</h2>
     <div class="cards">
         <div class="card">
             <h3>Websites</h3>
             <ul>
-                <li>Mini Site (One-Pager)</li>
-                <li>Normal Site (bis 5 Seiten)</li>
-                <li>Advanced Site (bis 10 Seiten, individuelles Design)</li>
+                <li>Mini, Normal & Advanced Sites</li>
                 <li>Responsive & sauber programmiert</li>
                 <li>DSGVO & SEO-Grundsetup</li>
+                <li>Individuelles Design möglich</li>
             </ul>
         </div>
         <div class="card">
             <h3>Discord Bots</h3>
             <ul>
-                <li>Free Bot (Basisfunktionen)</li>
-                <li>Super Bot (alle Features, Custom Name & Avatar)</li>
-                <li>Support-/Zweiter Bot</li>
-                <li>Immer online (Paid Plan)</li>
-                <li>Individuelle Anpassungen möglich</li>
+                <li>Free Plan / Paid Plan</li>
+                <li>Custom Name & Avatar (Paid)</li>
+                <li>Immer online (Paid)</li>
+                <li>Support-/Zweiter Bot möglich</li>
             </ul>
         </div>
         <div class="card">
             <h3>Sonstiges Tech</h3>
             <ul>
                 <li>Automatisierungen</li>
-                <li>Hosting Setup</li>
-                <li>Domain & Email Einrichtung</li>
+                <li>Hosting & Domain Setup</li>
                 <li>Kleinprojekte & Tools</li>
             </ul>
         </div>
     </div>
 </section>
 
+<!-- Packages Section -->
 <section id="packages">
-    <h2>Preispakete</h2>
+    <h2>Website Pakete</h2>
     <div class="cards">
         <div class="card">
             <h3>Mini Site</h3>
@@ -113,6 +142,34 @@ footer {text-align:center; padding:30px; background:#161b22; margin-top:50px; co
     </div>
 </section>
 
+<!-- Prices Section -->
+<section id="prices">
+    <h2>Discord Bot Pakete</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Normales Paket (Free)</h3>
+            <ul>
+                <li>Fast jede Funktion</li>
+                <li>Nicht immer online</li>
+                <li>Kein eigener Name</li>
+                <li>Kein eigenes Profilbild</li>
+            </ul>
+            <div class="price">0 €</div>
+        </div>
+        <div class="card">
+            <h3>Super Paket</h3>
+            <ul>
+                <li>Alle Funktionen</li>
+                <li>Eigener Bot Name & Profilbild</li>
+                <li>Zweiter Bot / Supportbot</li>
+                <li>Immer online</li>
+            </ul>
+            <div class="price">5,99 € / Monat</div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
 <section id="contact">
     <h2>Kontakt</h2>
     <form class="contact-form">
@@ -121,6 +178,10 @@ footer {text-align:center; padding:30px; background:#161b22; margin-top:50px; co
         <textarea placeholder="Deine Nachricht" rows="6" required></textarea>
         <button type="submit">Nachricht senden</button>
     </form>
+    <div class="contact-info">
+        📧 E-Mail: <a href="mailto:kontakt@twotech.de">kontakt@twotech.de</a><br>
+        💬 Discord: <a href="https://discord.gg/DEINSERVER">Join hier</a>
+    </div>
 </section>
 
 <footer>
